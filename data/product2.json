@@ -1,0 +1,10 @@
+{
+    "id": 2,
+    "name": "AI Assistant",
+    "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+    "description": "An advanced AI-powered personal assistant.",
+    "price": 499.99,
+    "currency": "USD",
+    "rate": 3.4,
+    "numberOfReviws":2000
+}

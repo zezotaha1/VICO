@@ -132,6 +132,7 @@
         overflow-x: auto;
         white-space: nowrap;
         scroll-behavior: smooth;
+        scrollbar-width: none;
     }
     .product-card {
         margin-right: 40px;

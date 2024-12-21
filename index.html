@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="./styles/about.css">
   <link rel="stylesheet" href="./styles/contact.css">
   <link rel="stylesheet" href="./styles/productView.css">
-
+  <link rel="stylesheet" href="./styles/cart.css">
 </head>
 
 <body>
@@ -150,6 +150,35 @@
       </div>
     </section>
     <!-- product details end -->
+    <!-- Cart -->
+    <section id="cart">
+      <header>
+        Shopping Cart & Checkout
+        <div class="cart-preview" onclick="showCart()">🛒</div>
+      </header>
+        <h1>Our Products</h1>
+      <div class="product-grid" id="product-list">
+          <!-- Dynamically generated product cards will go here -->
+      </div>
+
+      <div class="cart-container">
+          <h2>Your Cart</h2>
+          <div id="cart-items"></div>
+          <div class="cart-total">
+              Total: <span id="cart-total">$0.00</span>
+          </div>
+          <div class="cart-summary">
+              <label for="payment-method">Choose Payment Method:</label>
+              <select id="payment-method" class="btn">
+                  <option value="credit-card">Credit Card</option>
+                  <option value="fawry">Fawry</option>
+                  <option value="cash">Cash</option>
+              </select>
+              <button class="btn" onclick="checkout()">Proceed to Checkout</button>
+              <a href="products.html" class="btn">Return to Products</a>
+          </div>
+    </div>
+    </section>
     <!-- about us -->
     <section id="about">
       <div class="about-us">
@@ -350,6 +379,7 @@
   <script src="./scripts/companyDetails.js"></script>
 
   <script src="./scripts/productDetails.js"></script>
+  <script src="./scripts/cart.js"></script>
   <script src="./scripts/app.js"></script>
 </body>
 
