@@ -1,0 +1,107 @@
+{
+      "id":1,
+      "name": "Innovate Tech Co.",
+      "address": "456 Pioneer Ave, Tech City, TX, USA",
+      "imagePath": "./assets/images/companies/innovate-tech-logo.png",
+      "description": "Provides AI-driven retail solutions.",
+      "authorId": 101,
+      "products": [
+        {
+          "id": 1,
+          "name": "SmartHub",
+          "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+          "description": "A cutting-edge IoT platform for smart homes.",
+          "price": 199.99,
+          "currency": "USD"
+        },
+        {
+          "id": 5,
+          "name": "SmartHub",
+          "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+          "description": "A cutting-edge IoT platform for smart homes.",
+          "price": 199.99,
+          "currency": "USD"
+        },
+        {
+          "id": 2,
+          "name": "AI Assistant",
+          "description": "An advanced AI-powered personal assistant.",
+          "price": 499.99,
+          "currency": "USD"
+        },
+        {
+          "id": 3,
+          "name": "SecureNet",
+          "description": "A comprehensive cybersecurity solution for businesses.",
+          "price": 299.99,
+          "currency": "USD"
+        },
+        {
+          "id": 1,
+          "name": "SmartHub",
+          "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+          "description": "A cutting-edge IoT platform for smart homes.",
+          "price": 199.99,
+          "currency": "USD"
+        },
+        {
+          "id": 5,
+          "name": "SmartHub",
+          "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+          "description": "A cutting-edge IoT platform for smart homes.",
+          "price": 199.99,
+          "currency": "USD"
+        },
+        {
+          "id": 2,
+          "name": "AI Assistant",
+          "description": "An advanced AI-powered personal assistant.",
+          "price": 499.99,
+          "currency": "USD"
+        },
+        {
+          "id": 3,
+          "name": "SecureNet",
+          "description": "A comprehensive cybersecurity solution for businesses.",
+          "price": 299.99,
+          "currency": "USD"
+        }
+        
+      ],
+      "jobOffers": [
+        {
+          "id": 1,
+          "title": "Software Engineer",
+          "location": "Remote",
+          "salary": {
+            "amount": 80000,
+            "currency": "USD",
+            "per": "year"
+          },
+          "description": "Develop and maintain scalable web applications."
+        },
+        {
+          "id": 2,
+          "title": "Marketing Specialist",
+          "location": "Tech City, TX, USA",
+          "salary": {
+            "amount": 60000,
+            "currency": "USD",
+            "per": "year"
+          },
+          "description": "Create and execute marketing campaigns for new products."
+        },
+        {
+          "id": 3,
+          "title": "IT Support Technician",
+          "location": "On-Site",
+          "salary": {
+            "amount": 45000,
+            "currency": "USD",
+            "per": "year"
+          },
+          "description": "Provide technical support and resolve IT issues."
+        }
+      ]
+    }
+  

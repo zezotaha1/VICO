@@ -3,32 +3,33 @@
     background: url('../assets/images/WhatsApp\ Image\ 2024-12-17\ at\ 22.24.20_b0d1a420.jpg') no-repeat center center/cover;
     background-size: cover;
     color: white;
-}
 
-.contact-form {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: black;
-}
 
-.contact-details {
-    line-height: 2;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+    .contact-form {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
 
-.contact-details i {
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-.contact-detail span{
-    color: rgb(164, 162, 162);
-}
+    .contact-details {
+        line-height: 2;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
 
-.contact-detail-div1{
-    margin-left: 10px;
-}
-.contact-detail{
-    display: flex;
+    .contact-details i {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .contact-detail span{
+        color: rgb(164, 162, 162);
+    }
+
+    .contact-detail-div1{
+        margin-left: 10px;
+    }
+    .contact-detail{
+        display: flex;
+    }
 }

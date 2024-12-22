@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "name": "SmartHub",
+    "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+    "description": "A cutting-edge IoT platform for smart homes.",
+    "price": 199.99,
+    "currency": "USD",
+    "rate": 3.4,
+    "numberOfReviws":2000
+}

@@ -1,0 +1,147 @@
+.dashboard {
+  display: flex;
+  gap: 20px;
+}
+/* start side bar */
+.dashboard > aside {
+  width: 250px;
+  background-color: #eeeeee1f;
+  padding: 20px;
+  border-radius: 5px;
+  height: 90vh;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dashboard > aside > .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  color: white;
+  border-bottom: 1px solid gray;
+}
+
+.dashboard > aside > .logo > h2 {
+  width: 90px;
+  height: 90px;
+  background-color: var(--section-bg);
+  text-shadow: 0px 0px 5px;
+  line-height: 90px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 10px navajowhite, inset 0px 0px 10px white;
+}
+
+.dashboard > aside > .logo > p {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.dashboard > aside > .dash-featurs {
+  padding: 0;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard > aside > .dash-featurs > li > a {
+  display: block;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--inactive-button);
+  transition: 0.4s;
+}
+
+.dashboard > aside > .dash-featurs > li > a:hover {
+  color: white;
+  background-color: var(--inactive-button);
+}
+/* start header */
+.dashboard > .main > header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 10px 0;
+  box-shadow: 0px 9px 11px -9px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dashboard > .main > header > .user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--inactive-button);
+}
+
+.dashboard > .main > header > .user > img {
+  width: 90px;
+  height: 90px;
+  border: 1px dashed white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px var(--inactive-button);
+}
+
+.dashboard > .main > header > .user > h3 {
+  color: var(--inactive-button);
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0;
+}
+
+.dashboard > .main > header > select {
+  width: fit-content;
+  background-color: var(--section-bg);
+  color: white;
+  padding: 10px 45px 10px 15px;
+  border: none;
+  box-shadow: 0px 0px 5px 1px var(--alert-warning-bg);
+}
+/* start summary */
+.summary table {
+  color: white;
+}
+.card {
+  text-align: center;
+  color: #fff;
+}
+.projects-card {
+  background-color: hsl(212, 86%, 64%);
+}
+.members-card {
+  background-color: hsl(34, 97%, 64%);
+}
+.offers-card {
+  background-color: hsl(180, 62%, 55%);
+}
+.profits-card {
+  background-color: hsl(0, 78%, 62%);
+}
+.member-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+/* offers section */
+.offers .card {
+  background-color: #eee3;
+}
+
+.offers .card h5 {
+  background-color: var(--inactive-button);
+  padding: 10px;
+}
+
+/* members section */
+.members .card {
+  background-color: #eee3;
+}
+
+.members table {
+  color: white;
+}

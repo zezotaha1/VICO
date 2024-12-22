@@ -1,0 +1,104 @@
+body {
+    font-family: Lato, sans-serif;
+    background-color:#111827;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-sticky a{
+display: block;
+padding-left: 10px;
+margin-top: 30px;
+text-decoration: none;
+color: rgb(254, 254, 254);
+padding:8px 5px 8px 5px;
+
+}
+nav h3{
+    background-color: darkcyan;
+    margin: 0 -10px  0 -15px;
+    padding: 3px 0px 3px 20px;
+    
+}
+.sidebar-sticky a:hover{
+    color:white;
+}
+
+.sidebar{
+    background-color:rgb(52, 88, 88);
+}
+.sidebar a:hover {
+    background-color:  darkcyan;
+} 
+
+.main-content {
+    padding: 20px;
+}
+*table{
+    padding-left: 15px;
+}
+.users{
+    padding-left: 15px;
+    height: 80vh;
+    background-color: white;
+    overflow-y: scroll;
+}
+.admin{
+height: 80vh;
+}
+.card {
+    min-height: 100%;
+    background-color: darkcyan;
+
+}
+.navbar {
+    background: rgb(2, 20, 20);
+}
+.company{
+    background-color: rgb(255, 255, 255);
+}
+
+.company1{
+    background-color: white;
+    height: 77vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Make sidebar collapse on small screens */
+@media (max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* Navbar toggle button */
+.sidebar-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+}
+i{
+    padding-right: 5px;
+    font-size: large;
+}

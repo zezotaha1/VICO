@@ -73,22 +73,46 @@ function validateGender() {
     return false;
 }
 
-//terms and conditions validation
-function validateTerms() {
-    const termsChecked = document.getElementById("terms").checked;
-    if (termsChecked) {
-        clearError();
-        return true;
+document.getElementById("signupForm").addEventListener("submit", async function (event) {
+    event.preventDefault();  // Prevent default form submission
+
+    // Validate all fields
+    if (validateFullName() && validateEmail() && validatePasswordComplexity() && validateConfirmPassword() && validateBirthdate() && validateGender()) {
+        // Collect form data
+        const formData = {
+            id: 0, // Assuming the server assigns an ID
+            name: document.getElementById("fullname").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+            birthdate: new Date(document.getElementById("birthdate").value).toISOString(),
+            role : "user"
+        };
+
+        // Send data to the API
+        try {
+            const response = await fetch("http://localhost:5118/api/Users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                alert("Sign up successful!");
+                // Optionally, redirect or clear the form
+                window.location.href = "./login.html";  // Redirect to login page
+            } else {
+                const errorData = await response.json();
+                alert("Error: " + (errorData.message || "An error occurred during signup."));
+            }
+        } catch (error) {
+            alert("An error occurred while communicating with the server: " + error.message);
+        }
     }
-    showError("terms", "You must agree to the terms and conditions.");
-    return false;
-}
-
-document.getElementById("signupForm").addEventListener("submit", function (event) {
-    if(validateFullName() && validateEmail() && validatePasswordComplexity() && validateConfirmPassword() && validateBirthdate() && validateGender() && validateTerms())
-        event.preventDefault();
-
 });
+
+
 
 // Real-time validation
 const inputs = document.querySelectorAll("#signupForm input");
@@ -117,9 +141,7 @@ function validateField(input) {
         validateBirthdate();
     } else if (id === "gender") {
         validateGender();
-    } else if (id === "terms") {
-        validateTerms();
-    } 
+    }
 }
 
 // Helper Functions

@@ -1,0 +1,10 @@
+{
+    "id": 3,
+    "name": "SecureNet",
+    "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+    "description": "A comprehensive cybersecurity solution for businesses.",
+    "price": 299.99,
+    "currency": "USD",
+    "rate": 3.4,
+    "numberOfReviws":2000
+}
