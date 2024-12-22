@@ -50,12 +50,24 @@
       </ul>
     </section>
     <section id="header-righy">
+     <!-- Profile and Cart Icons will be dynamically added if the user cookie exists -->
+    <div id="authButtons">
       <a href="./signup.html">
         <button class="btn secondary-btn text-light">Sign-In</button>
       </a>
       <a href="./login.html">
         <button class="btn main-btn text-light">Login</button>
       </a>
+    </div>
+    <div id="userIcons" class="d-none">
+      <!-- These icons will show if the user is logged in -->
+      <a href="./profile.html" id="profile-icon" style="font-size: 30px; margin: 15px;">
+        <i class="fas fa-user-circle text-light"></i>
+      </a>
+      <a href="./#cart" id="cart-icon" style="font-size: 30px; margin: 15px;">
+        <i class="fas fa-shopping-cart text-light"></i>
+      </a>
+    </div>
     </section>
   </header>
   <!-- header end -->
@@ -175,7 +187,7 @@
                   <option value="cash">Cash</option>
               </select>
               <button class="btn" onclick="checkout()">Proceed to Checkout</button>
-              <a href="products.html" class="btn">Return to Products</a>
+              <a href="#companies" class="btn">Return to Products</a>
           </div>
     </div>
     </section>
