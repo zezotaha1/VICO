@@ -9,7 +9,7 @@
         {
           "id": 1,
           "name": "SmartHub",
-          "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+          "imagePath": "./assets/images/companies/1.jpeg",  
           "description": "A cutting-edge IoT platform for smart homes.",
           "price": 199.99,
           "currency": "USD"
@@ -17,7 +17,7 @@
         {
           "id": 5,
           "name": "SmartHub",
-          "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+          "imagePath": "./assets/images/companies/2.jpg",  
           "description": "A cutting-edge IoT platform for smart homes.",
           "price": 199.99,
           "currency": "USD"
@@ -39,7 +39,7 @@
         {
           "id": 1,
           "name": "SmartHub",
-          "imagePath": "./assets/images/companies/innovate-tech-logo.png",  
+          "imagePath": "./assets/images/companies/3.jpg",  
           "description": "A cutting-edge IoT platform for smart homes.",
           "price": 199.99,
           "currency": "USD"
