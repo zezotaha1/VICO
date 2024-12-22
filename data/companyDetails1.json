@@ -25,6 +25,7 @@
         {
           "id": 2,
           "name": "AI Assistant",
+          "imagePath": "./assets/images/companies/1.jpeg",  
           "description": "An advanced AI-powered personal assistant.",
           "price": 499.99,
           "currency": "USD"
@@ -32,6 +33,7 @@
         {
           "id": 3,
           "name": "SecureNet",
+          "imagePath": "./assets/images/companies/1.jpeg",  
           "description": "A comprehensive cybersecurity solution for businesses.",
           "price": 299.99,
           "currency": "USD"
@@ -55,6 +57,7 @@
         {
           "id": 2,
           "name": "AI Assistant",
+          "imagePath": "./assets/images/companies/1.jpeg",  
           "description": "An advanced AI-powered personal assistant.",
           "price": 499.99,
           "currency": "USD"
@@ -62,6 +65,7 @@
         {
           "id": 3,
           "name": "SecureNet",
+          "imagePath": "./assets/images/companies/2.jpg",  
           "description": "A comprehensive cybersecurity solution for businesses.",
           "price": 299.99,
           "currency": "USD"
