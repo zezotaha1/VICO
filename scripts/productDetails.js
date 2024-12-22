@@ -53,13 +53,6 @@ function displayProductDetails(productDetails) {
     document.getElementById("productAddTocart").setAttribute("onclick", `addToCart(event, ${productDetails.id}, 1)`);
 }
 
-// Function to display a general error message
-function showError(message) {
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'error-message';
-    errorDiv.textContent = message;
-    document.body.appendChild(errorDiv); // Or append to a specific section
-}
 
 // Function to retrieve query parameters from URL hash
 function getQueryParams(hash) {

@@ -5,7 +5,7 @@
         "createdAt": "2020-05-15",
         "description": "A leading provider of IT and software development services.",
         "specialization": "Software Development",
-        "imagePath": "https://cdn.pixabay.com/photo/2017/09/30/20/40/technology-2800846_1280.jpg",
+        "imagePath": "./assets/images/companies/1.png",
         "authorId":1
     },
     {
@@ -14,7 +14,7 @@
         "createdAt": "2018-03-10",
         "description": "Specializes in renewable energy and sustainable solutions.",
         "specialization": "Renewable Energy",
-        "imagePath": "https://cdn.pixabay.com/photo/2017/08/08/02/25/sustainable-2604324_1280.jpg"
+        "imagePath": "./assets/images/companies/1.png"
     },
     {
         "id": 3,
@@ -22,7 +22,7 @@
         "createdAt": "2015-07-20",
         "description": "Focused on developing innovative healthcare solutions.",
         "specialization": "Healthcare Technology",
-        "imagePath": "https://cdn.pixabay.com/photo/2017/10/26/12/40/medical-2891054_1280.jpg"
+        "imagePath": "./assets/images/companies/1.png"
     },
     {
         "id": 4,
@@ -30,7 +30,7 @@
         "createdAt": "2019-11-01",
         "description": "Provides advanced financial security solutions.",
         "specialization": "Finance",
-        "imagePath": "https://cdn.pixabay.com/photo/2018/11/13/21/43/money-3815956_1280.jpg"
+        "imagePath": "./assets/images/companies/1.png"
     },
     {
         "id": 5,
@@ -38,7 +38,7 @@
         "createdAt": "2021-01-25",
         "description": "Offers educational software and e-learning platforms.",
         "specialization": "Education Technology",
-        "imagePath": "https://cdn.pixabay.com/photo/2015/03/26/09/46/student-690122_1280.jpg"
+        "imagePath": "./assets/images/companies/1.png"
     },
     {
         "id": 6,
@@ -46,7 +46,7 @@
         "createdAt": "2017-08-19",
         "description": "Revolutionizing agriculture through technology.",
         "specialization": "Agricultural Technology",
-        "imagePath": "https://cdn.pixabay.com/photo/2017/08/01/00/02/agriculture-2562138_1280.jpg"
+        "imagePath": "./assets/images/companies/1.png"
     },
     {
         "id": 7,
@@ -54,7 +54,7 @@
         "createdAt": "2016-06-14",
         "description": "Experts in urban planning and architectural design.",
         "specialization": "Architecture",
-        "imagePath": "https://cdn.pixabay.com/photo/2017/01/12/14/35/architecture-1979462_1280.jpg"
+        "imagePath": "./assets/images/companies/1.png"
     },
     {
         "id": 8,
@@ -62,7 +62,7 @@
         "createdAt": "2019-02-22",
         "description": "Provides AI-driven retail solutions.",
         "specialization": "Retail Technology",
-        "imagePath": "https://cdn.pixabay.com/photo/2017/07/31/22/44/online-shopping-2557410_1280.jpg"
+        "imagePath": "./assets/images/companies/1.png"
     },
     {
         "id": 9,
@@ -70,7 +70,7 @@
         "createdAt": "2020-11-30",
         "description": "Pioneers in smart home automation and IoT devices.",
         "specialization": "Smart Home Technology",
-        "imagePath": "https://cdn.pixabay.com/photo/2017/05/24/02/39/smart-home-2330693_1280.png"
+        "imagePath": "./assets/images/companies/1.png"
     },
     {
         "id": 10,
@@ -78,7 +78,7 @@
         "createdAt": "2014-09-18",
         "description": "Develops cutting-edge biotechnological products.",
         "specialization": "Biotechnology",
-        "imagePath": "https://cdn.pixabay.com/photo/2017/08/30/03/45/microscope-2697290_1280.jpg"
+        "imagePath": "./assets/images/companies/1.png"
     },
     {
         "id": 11,
@@ -86,7 +86,7 @@
         "createdAt": "2018-04-05",
         "description": "Offers robust cloud computing solutions.",
         "specialization": "Cloud Computing",
-        "imagePath": "https://cdn.pixabay.com/photo/2017/02/27/01/42/cloud-computing-2109239_1280.jpg"
+        "imagePath": " ./assets/images/companies/1.png"
     },
     {
         "id": 12,
@@ -94,6 +94,6 @@
         "createdAt": "2022-02-15",
         "description": "Innovators in autonomous vehicle technology.",
         "specialization": "Automotive Technology",
-        "imagePath": "https://cdn.pixabay.com/photo/2020/01/19/19/49/car-4773328_1280.jpg"
+        "imagePath": "./assets/images/companies/1.png"
     }
 ]

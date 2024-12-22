@@ -1,11 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>update Company</title>
-  </head>
-  <body>
-    update Company
-  </body>
+    <title>Create Virtual Company</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #111827;
+            color: white;
+        }
+
+        h1 {
+            font-family: "Arial", sans-serif;
+            font-weight: bold;
+            color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Edite Virtual Company</h1>
+        <form id="companyForm" class="mt-4">
+            <div class="mb-3">
+                <label for="companyName" class="form-label">Company Name</label>
+                <input type="text" class="form-control" id="companyName" placeholder="Enter company name" required />
+            </div>
+            <div class="mb-3">
+                <label for="specialize" class="form-label">Specialize</label>
+                <input type="text" class="form-control" id="specialize" placeholder="Enter specialization" required />
+            </div>
+            <div class="mb-3">
+                <label for="dateOfEstablish" class="form-label">Date of Establish</label>
+                <input type="date" class="form-control" id="dateOfEstablish" required />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">
+                Save Company
+            </button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("get", "http://localhost:5500/data/companies.json")
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4)
+                if (xhr.status == 200) {
+                    var response = JSON.parse(xhr.responseText);
+                     document.getElementById("companyName").value=response[1].name;
+                     document.getElementById("specialize").value=response[1].specialization;
+                    document.getElementById("dateOfEstablish").value=response[1].createdAt;
+                }
+        }
+        xhr.send();
+        document
+            .getElementById("companyForm")
+            .addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const companyName = document.getElementById("companyName").value;
+                const specialize = document.getElementById("specialize").value;
+                const dateOfEstablish =
+                    document.getElementById("dateOfEstablish").value;
+                const companyImage = document.getElementById("companyImage").files[0];
+
+                if (!companyImage) {
+                    alert("Please upload an image for the company.");
+                    return;
+                }
+
+                const formData = new FormData();
+                formData.append("companyName", companyName);
+                formData.append("specialize", specialize);
+                formData.append("dateOfEstablish", dateOfEstablish);
+                formData.append("companyImage", companyImage);
+
+                fetch("https://example.com/api/virtual-companies", {
+                    method: "POST",
+                    body: formData,
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            alert("Company saved successfully!");
+                            document.getElementById("companyForm").reset();
+                        } else {
+                            alert("Failed to save the company.");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                        alert("An error occurred while saving the company.");
+                    });
+            });
+    </script>
+</body>
 </html>
