@@ -84,7 +84,8 @@ document.getElementById("signupForm").addEventListener("submit", async function 
             name: document.getElementById("fullname").value,
             email: document.getElementById("email").value,
             password: document.getElementById("password").value,
-            birthdate: new Date(document.getElementById("birthdate").value).toISOString()
+            birthdate: new Date(document.getElementById("birthdate").value).toISOString(),
+            role : "user"
         };
 
         // Send data to the API

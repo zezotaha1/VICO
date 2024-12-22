@@ -29,7 +29,8 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
                 const userData = {
                     userId: result.userId,
                     name: result.name,
-                    email: result.email
+                    email: result.email,
+                    role: result.role
                 };
 
                 if (rememberMe) {
@@ -42,7 +43,12 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
                 // Redirect to the home page or another appropriate page
                 alert("Login successful!");
-                window.location.href = "./#home";
+                if(userData.role=='admin'){
+                    window.location.href = "./admin.html";
+                }
+                else if(userData.role=='user'){
+                    window.location.href = "./#home";
+                }
             } else {
                 showError("email", result.message || "Login failed. Please check your credentials.");
             }

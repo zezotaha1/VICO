@@ -45,7 +45,10 @@ function displayCompanyDetails(companyDetails) {
                 <p class="description">${companyDetails.description || 'No description available'}</p>
             </div>
         </div>
+        <div>
         <button class="be-cofounder">Be Co-Founder</button>
+        <a href="./workspace5.html?id=${companyDetails.id}"><button class="be-cofounder">work space</button></a>
+        </div>
     </div>
     `;
 

@@ -1,0 +1,113 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "role": "admin",
+        "password": "password123"
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "role": "employee",
+        "password": "password456"
+      },
+      {
+        "id": 3,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "user",
+        "password": "password789"
+      },
+      {
+        "id": 4,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 5,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 6,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 7,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 8,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 9,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 10,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 11,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 12,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 14,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+      ,
+      {
+        "id": 13,
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "role": "owner",
+        "password": "password101"
+      }
+    ]
+  }
+  

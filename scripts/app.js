@@ -43,10 +43,12 @@ window.addEventListener("load", changeLoginToCart);
 
 // Change login state to cart icon based on user cookie
 function changeLoginToCart() {
+  
   const userCookie = document.cookie.split('; ').find(row => row.startsWith('user='));
-
   if (userCookie) {
     try {
+      debugger;
+      console.log("User cookie found:", userCookie);
       const userData = JSON.parse(userCookie.split('=')[1]);
       // Hide Sign-In/Login buttons
       document.getElementById("authButtons").classList.add("d-none");
@@ -62,7 +64,6 @@ function changeLoginToCart() {
     document.getElementById("userIcons").classList.add("d-none");
   }
 };
-
 // Logout Function
 function logout() {
   // Delete cookies by setting them to expire in the past
@@ -76,3 +77,47 @@ function logout() {
 function showError(message) {
   alert(message); // Consider improving with a more user-friendly UI for errors (e.g., modal or toast)
 }
+
+// Function to check if the user is allowed to navigate to a path based on their role
+function checkIfAllowedToNavigate(pathname, userRole) {
+  // Define paths that are restricted for users
+  const notAllowedPaths = ['/admin.html', '/CompaniesView.html', '/companyManage.html', '/companyUsers.html'];
+
+  // Check if the user role is 'user' and if the path is restricted
+  if (userRole === 'user' && notAllowedPaths.includes(pathname)) {
+    return false; // Deny navigation if path is restricted for the user
+  }
+  
+  return true; // Allow navigation for other paths
+}
+
+// Example: Function to handle pathname change
+function handlePathnameChange() {
+  const pathname = window.location.pathname;
+  const userRole = getUserRole(); // Get the current user role from the cookie
+
+  if (!checkIfAllowedToNavigate(pathname, userRole)) {
+    alert('You are not allowed to go to this page.');
+    // Redirect to a safe page (e.g., home page)
+    window.location.href = '/#home';
+  }
+}
+
+// Function to get the user role from the cookie
+function getUserRole() {
+  const cookie = JSON.parse(document.cookie.split('; ').find(row => row.startsWith('user=')));
+  return cookie.role; // Return an empty string if the cookie is not found
+}
+
+// Event listener for pathname changes (e.g., back/forward navigation)
+window.onpopstate = function(event) {
+  handlePathnameChange();
+};
+
+// Optionally, listen for hash changes (if you're using hash-based routing)
+window.addEventListener('hashchange', function() {
+  handlePathnameChange();
+});
+
+// Run the check when the page initially loads
+handlePathnameChange();
