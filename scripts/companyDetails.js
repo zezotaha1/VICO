@@ -34,23 +34,11 @@ function displayCompanyDetails(companyDetails) {
         return;
     }
 
-    const companiesDiv = document.getElementById('company-details-header');
-    companiesDiv.innerHTML = `
-    <div class="company-details">
-        <div class="logo">
-            <img src="${companyDetails.imagePath || 'default-logo.png'}" alt="logo">
-            <div>
-                <h1>${companyDetails.name || 'Unknown Company'}</h1>
-                <p class="location">${companyDetails.address || 'No address available'}</p>
-                <p class="description">${companyDetails.description || 'No description available'}</p>
-            </div>
-        </div>
-        <div>
-        <button class="be-cofounder">Be Co-Founder</button>
-        <a href="./workspace5.html?id=${companyDetails.id}"><button class="be-cofounder">work space</button></a>
-        </div>
-    </div>
-    `;
+    document.getElementById('company-details-image').src=companyDetails.imagePath || 'default-logo.png';
+    document.getElementById('company-details-name').textContent = companyDetails.name || 'Unknown Company';
+    document.getElementById('company-details-location').textContent = companyDetails.address || 'No address available';
+    document.getElementById('company-details-description').textContent = companyDetails.description || 'No description available';
+    document.getElementById('company-details-workspace-link').href = `./workspace5.html?id=${companyDetails.id}`;
 
     // Display products
     const productsSection = document.getElementById('product-grid');
@@ -81,7 +69,7 @@ function displayCompanyDetails(companyDetails) {
         jobDiv.innerHTML = `
         <div class="d-flex justify-content-between m-5">
             <h1>${job.title}</h1>
-            <button class="btn btn-secondary">APPLY</button>
+            <button class="btn btn-secondary" onclick="showJobApplyForm('${job.title}',${job.id})">APPLY</button>
         </div>
         <div class="container p-4 border bg-muted text-dark mt-4 rounded-3">
             <h5>Job Description..</h5>
@@ -166,3 +154,64 @@ function showError(message) {
     errorDiv.textContent = message;
     document.body.appendChild(errorDiv); // Or append to a specific section
 }
+//co-founder form
+document.getElementById('be-cofounder-button').addEventListener('click', () => {
+    document.getElementById('cofounder-form-modal').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+});
+
+document.getElementById('close-form').addEventListener('click', () => {
+    document.getElementById('cofounder-form-modal').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+});
+
+document.getElementById('cofounder-form').addEventListener('submit', (event) => {
+    debugger;
+    event.preventDefault(); // Prevent form from refreshing the page
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const componyId = getQueryParams(window.location.hash).id;
+    const userId= JSON.parse(document.cookie.split(';').find(row => row.startsWith('user=')).split("=")[1]).userId;
+    console.log('Form Submitted:', { name, email, message,componyId,userId });
+
+    // TODO: Add your logic to handle the form submission, e.g., sending data to the server
+    alert('Form submitted successfully!');
+
+    // Reset form and hide modal
+    document.getElementById('cofounder-form').reset();
+    document.getElementById('cofounder-form-modal').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+});
+//job apply form
+function showJobApplyForm(jobTitle,id) {
+    document.getElementById('job-title').value = jobTitle;
+    document.getElementById('job-id').value = id;
+    document.getElementById('job-apply-modal').style.display = 'block';
+    document.getElementById('job-overlay').style.display = 'block';
+}
+
+document.getElementById('close-job-form').addEventListener('click', () => {
+    document.getElementById('job-apply-modal').style.display = 'none';
+    document.getElementById('job-overlay').style.display = 'none';
+});
+
+document.getElementById('job-apply-form').addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const jobTitle = document.getElementById('job-title').value;
+    const jobId = document.getElementById('job-id').value;
+    const name = document.getElementById('applicant-name').value;
+    const email = document.getElementById('applicant-email').value;
+    const coverLetter = document.getElementById('cover-letter').value;
+
+    console.log('Job Application Submitted:', { jobTitle,jobId, name, email, coverLetter });
+
+    // TODO: Add your logic to handle form submission, such as sending data to the backend
+    alert('Job application submitted successfully!');
+
+    // Reset the form and hide the modal
+    document.getElementById('job-apply-form').reset();
+    document.getElementById('job-apply-modal').style.display = 'none';
+    document.getElementById('job-overlay').style.display = 'none';
+});

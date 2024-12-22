@@ -17,7 +17,7 @@ function getQueryParams(url) {
   return params;
 }
 
-// Function to navigate between routes
+// Function to navigate between routes  
 function navigate() {
   const hash = window.location.hash.split("?")[0] || "#home"; // Default route
 
@@ -47,8 +47,6 @@ function changeLoginToCart() {
   const userCookie = document.cookie.split('; ').find(row => row.startsWith('user='));
   if (userCookie) {
     try {
-      debugger;
-      console.log("User cookie found:", userCookie);
       const userData = JSON.parse(userCookie.split('=')[1]);
       // Hide Sign-In/Login buttons
       document.getElementById("authButtons").classList.add("d-none");
@@ -106,7 +104,7 @@ function handlePathnameChange() {
 // Function to get the user role from the cookie
 function getUserRole() {
   try {
-    const cookie = JSON.parse(document.cookie.split('; ').find(row => row.startsWith('user=')));
+    const cookie =JSON.parse(document.cookie.split(';').find(row => row.startsWith('user=')).split("=")[1]);
     return cookie.role;
   } catch (error) {
     console.error('Error parsing user cookie or not login:', error);

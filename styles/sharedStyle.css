@@ -1,0 +1,87 @@
+/* start global rules */
+:root {
+  --section-bg: #111827;
+  --text-color: #9ca3af;
+  /* --heading-color: #f9fafb; */
+  --inactive-button: #8b5cf6;
+  --active-button: #6d28d9;
+  --button-text-color: #f9fafb;
+  --alert-text-color: #111827;
+  --alert-success-bg: #34d399;
+  --alert-warning-bg: #fbbf24;
+  --alert-error-bg: #f87171;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  background-color: var(--section-bg);
+  /* color: var(--text-color); */
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Poppins, sans-serif;
+  color: var(--heading-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--button-text-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.row {
+  margin: 0;
+}
+
+.main-btn {
+  background-color: var(--inactive-button);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background-color: var(--active-button);
+}
+
+.success,
+.warning,
+.error {
+  color: var(--alert-text-color);
+}
+
+.success {
+  background-color: var(--alert-success-bg);
+}
+
+.warning {
+  background-color: var(--alert-warning-bg);
+}
+
+.error {
+  background-color: var(--alert-error-bg);
+}
+/* end global rules */
