@@ -94,7 +94,7 @@
   margin: 0;
 }
 
-.dashboard > .main > header > select {
+.dashboard > .main > header >.company > select {
   width: fit-content;
   background-color: var(--section-bg);
   color: white;

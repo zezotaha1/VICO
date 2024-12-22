@@ -27,8 +27,48 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
+    <!-- header -->
+  <header class="container-fluid py-3 d-flex justify-content-between align-items-center">
+    <section id="header-left">
+      <img src="./assets/images/logo.png" alt="" />
+    </section>
+    <section id="header-mid">
+      <ul class="p-0 m-0 d-flex gap-4">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#companies" id="companies-link">Companies</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#testimonial" id="testimoinal-link">Testimonials</a></li>
+        <li><a href="#contact" id="contact-link">Contact Us</a></li>
+      </ul>
+    </section>
+    <section id="header-righy">
+     <!-- Profile and Cart Icons will be dynamically added if the user cookie exists -->
+    <div id="authButtons">
+      <a href="./signup.html">
+        <button class="btn secondary-btn text-light">Sign-Up</button>
+      </a>
+      <a href="./login.html">
+        <button class="btn main-btn text-light">Login</button>
+      </a>
+    </div>
+    <div id="userIcons" class="d-none">
+      <!-- These icons will show if the user is logged in -->
+      <a href="./customerDahsboard.html" id="profile-icon" style="font-size: 30px; margin: 15px;">
+        <i class="fas fa-user-circle text-light"></i>
+      </a>
+      <a href="./#cart" id="cart-icon" style="font-size: 30px; margin: 15px;">
+        <i class="fas fa-shopping-cart text-light"></i>
+      </a>
+      <a href="/login.html" id="logout-icon" style="font-size: 30px; margin: 15px;" onclick="logout()">
+        <i class="fas fa-sign-out-alt text-light"></i>
+      </a>
+    </div>
+    </section>
+  </header>
+  <!-- header end -->
     <section class="dashboard">
       <aside>
         <section class="logo">
@@ -49,12 +89,17 @@
               >Update Company</a
             >
           </li>
+          <li>
+            <a href="./pages/manageWorkspace.html" data-page="manageWorkspace"
+              >Manage Workspace</a
+            >
+          </li>
           <li><a href="./pages/offers.html" data-page="offers">Offers</a></li>
           <li>
             <a href="./pages/members.html" data-page="members">Members</a>
           </li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Log-Out</a></li>
+          <!-- <li><a href="/#home">Home</a></li>
+          <li><a href="#">Log-Out</a></li> -->
         </ul>
       </aside>
       <section class="main container-fluid">
@@ -64,12 +109,16 @@
             <img src="./assets/images/logo.png" alt="user-image" />
             <h3 id="user-name">AlTayeb Khaled</h3>
           </section>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Chose Your Company</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+          <div class="company d-flex gap-2">
+
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Chose Your Company</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <input type="button" class="btn btn-info" value="addCompany">
+          </div>
         </header>
         <!-- end header section -->
         <!-- start content section -->
@@ -81,5 +130,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
     <script src="./scripts/dashboard.js"></script>
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
