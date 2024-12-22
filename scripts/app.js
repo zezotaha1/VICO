@@ -84,7 +84,7 @@ function checkIfAllowedToNavigate(pathname, userRole) {
   const notAllowedPaths = ['/admin.html', '/CompaniesView.html', '/companyManage.html', '/companyUsers.html'];
 
   // Check if the user role is 'user' and if the path is restricted
-  if (userRole === 'user' && notAllowedPaths.includes(pathname)) {
+  if (userRole != 'admin' && notAllowedPaths.includes(pathname)) {
     return false; // Deny navigation if path is restricted for the user
   }
   
@@ -97,7 +97,7 @@ function handlePathnameChange() {
   const userRole = getUserRole(); // Get the current user role from the cookie
 
   if (!checkIfAllowedToNavigate(pathname, userRole)) {
-    alert('You are not allowed to go to this page.');
+    showError('You are not allowed to go to this page.');
     // Redirect to a safe page (e.g., home page)
     window.location.href = '/#home';
   }
@@ -105,8 +105,13 @@ function handlePathnameChange() {
 
 // Function to get the user role from the cookie
 function getUserRole() {
-  const cookie = JSON.parse(document.cookie.split('; ').find(row => row.startsWith('user=')));
-  return cookie.role; // Return an empty string if the cookie is not found
+  try {
+    const cookie = JSON.parse(document.cookie.split('; ').find(row => row.startsWith('user=')));
+    return cookie.role;
+  } catch (error) {
+    console.error('Error parsing user cookie or not login:', error);
+    return ''; // Return an empty string if the cookie is not found
+  }
 }
 
 // Event listener for pathname changes (e.g., back/forward navigation)
